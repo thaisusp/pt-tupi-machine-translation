@@ -1,0 +1,2 @@
+# pt-tupi-machine-translation
+End-to-end NLP pipeline for PT–Old Tupi translation: preprocessing, zero-shot baselines, fine-tuning, metrics and analysis.
