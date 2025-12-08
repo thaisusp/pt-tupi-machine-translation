@@ -10,14 +10,14 @@ Repositório oficial do **Exercício Programa 2 (EP2)** da disciplina **MAC0508 
 
 ├── data/
 │   ├── processed/
-│   │   ├── test.csv                       # Conjunto de teste (Original/Arcaico)
+│   │   ├── test.csv                      # Conjunto de teste (Original/Arcaico)
 │   │   ├── test_modern.csv               # Conjunto de teste (Português Modernizado)
-│   │   └── train.csv                      # Conjunto de treinamento
-│   │   └── val.csv
-│   │   └── train_modern.csv    
-│   │   └── val_modern.csv                        # Conjunto de validação
+│   │   └── train.csv                     # Conjunto de treinamento (Original)
+│   │   └── val.csv                       # Conjunto de validação (Original)
+│   │   └── train_modern.csv              # Conjunto de treinamento (Moderno)
+│   │   └── val_modern.csv                # Conjunto de validação (Moderno)
 │   └── raw/
-│   │   ├── Cópia de portugues-guarani-tupi antigo.xlsx                      # Tupi Antigo
+│   │   ├── Cópia de portugues-guarani-tupi antigo.xlsx      # Tupi Antigo
 │   │   └── tupiantigo_portugues_moderno.csv                 # Português Moderno
 │                
 ├── results/
@@ -27,10 +27,11 @@ Repositório oficial do **Exercício Programa 2 (EP2)** da disciplina **MAC0508 
 ├── requirements.txt
 ├── main.py
 ├── src/
+│   ├── update_pt_corpus.ipynb   # Modernização do Corpus com GPT-4o-mini
 │   ├── zero_shot.py             # Zero-shot: mBART, NLLB, mT5
 │   ├── treino.py                # Fine-tuning NLLB (few-shot)
 │   ├── gerar_predicoes.py       # Predições + métricas do modelo treinado
-│   └── plots.py                 # Geração de gráficos
+│   └── plots.ipynb              # Geração de gráficos
 
 # Modelos e Estratégias
 
@@ -41,7 +42,7 @@ mT5-small	Text-to-Text	Prompt "translate Portuguese to Tupi..."
 
 # Metodologia
 
-Dados: Córpus paralelo Português-Tupi (Rezende, 2025). Inclui versão em Português Moderno (via GPT-4o) para reduzir a perplexidade dos modelos.
+Dados: Córpus paralelo Português-Tupi (Rezende, 2025). Inclui versão produzida em Português Moderno (via GPT-4o-mini) para reduzir a perplexidade dos modelos.
 
 # Métricas:
 
